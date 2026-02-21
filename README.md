@@ -1,4 +1,4 @@
-\# Spectral Forensics: Detecting Diffusion-Generated Imagery via $1/f^\\beta$ Power Law Violations
+# Spectral Forensics: Detecting Diffusion-Generated Imagery via $1/f^\\beta$ Power Law Violations
 
 
 
@@ -6,7 +6,7 @@ This repository contains the official implementation code for the paper \*\*"Spe
 
 
 
-\## Overview
+## Overview
 
 
 
