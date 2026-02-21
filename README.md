@@ -2,7 +2,7 @@
 
 
 
-This repository contains the official implementation code for the paper \*\*"Spectral Forensics: Detecting Diffusion-Generated Imagery via $1/f^\\beta$ Power Law Violations"\*\* (IEEE Signal Processing Letters submission `SPL-45372-2025.R1`).
+This repository contains the official implementation code for the paper **"Spectral Forensics: Detecting Diffusion-Generated Imagery via $1/f^\\beta$ Power Law Violations"** (IEEE Signal Processing Letters submission `SPL-45372-2025.R1`).
 
 
 
@@ -50,23 +50,23 @@ These scripts were introduced to rigorously validate cross-architecture generali
 
 
 
-* `dataset\_expansion\_sdxl\_nature.py`: Generates 100 high-resolution synthetic images using the `stabilityai/stable-diffusion-xl-base-1.0` (SDXL) model, utilizing nature-based prompts. Designed to run on a T4 GPU and save directly to Google Drive.
+* `dataset_expansion_sdxl_nature.py`: Generates 100 high-resolution synthetic images using the `stabilityai/stable-diffusion-xl-base-1.0` (SDXL) model, utilizing nature-based prompts. Designed to run on a T4 GPU and save directly to Google Drive.
 
-* `fetch\_real\_nature\_images\_fix.py`: Downloads 100 real, complex natural images from the `huggan/flowers-102-categories` dataset to serve as the authentic baseline for the SDXL/DALL-E 3 evaluations.
+* `fetch_real_nature_images_fix.py`: Downloads 100 real, complex natural images from the `huggan/flowers-102-categories` dataset to serve as the authentic baseline for the SDXL/DALL-E 3 evaluations.
 
-* `run\_ablation\_and\_generalization.py`: The master evaluation script for the revision. It performs feature extraction and runs a 5-fold cross-validation suite. It includes:
-
-
-&nbsp;   \* \*\*Classifier Ablation:\*\* Compares Logistic Regression, SVM (RBF kernel), and Random Forest to prove linear separability.
-
-&nbsp;   \* \*\*Feature Ablation:\*\* Compares the proposed 300-dimensional 1D azimuthal profile against a baseline using the raw flattened 2D power spectrum (16,384 features).
-
-&nbsp;   \* \*\*Cross-Architecture Evaluation:\*\* Tests the pipeline on the SDXL vs. Flowers-102 dataset.
-
-* `evaluate\_dalle3\_generalization.py`: Processes raw DALL-E 3 images, extracts 1D radial profiles, and evaluates them against the real nature baseline using the pre-established Logistic Regression model
+* `run_ablation_and_generalization.py`: The master evaluation script for the revision. It performs feature extraction and runs a 5-fold cross-validation suite. It includes:
 
 
-*(Note: The DALL-E 3 images utilized in the final paper evaluation were sourced from the public Kaggle repository `sunayanaa/dalle3-100`.)\*
+&nbsp;   * **Classifier Ablation:** Compares Logistic Regression, SVM (RBF kernel), and Random Forest to prove linear separability.
+
+&nbsp;   * **Feature Ablation:** Compares the proposed 300-dimensional 1D azimuthal profile against a baseline using the raw flattened 2D power spectrum (16,384 features).
+
+&nbsp;   * **Cross-Architecture Evaluation:** Tests the pipeline on the SDXL vs. Flowers-102 dataset.
+
+* `evaluate_dalle3_generalization.py`: Processes raw DALL-E 3 images, extracts 1D radial profiles, and evaluates them against the real nature baseline using the pre-established Logistic Regression model
+
+
+*(Note: The DALL-E 3 images utilized in the final paper evaluation were sourced from the public Kaggle repository `sunayanaa/dalle3-100`.)*
 
 
 
